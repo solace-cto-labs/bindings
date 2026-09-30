@@ -20,13 +20,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v2
+        uses: actions/checkout@0717577d45739eb3c851188b29f50ed6c0b2194e # v2
       - name: Check if Node.js project and has package.json
         id: packagejson
         run: test -e ./package.json && echo "::set-output name=exists::true" || echo "::set-output name=exists::false"
       - if: steps.packagejson.outputs.exists == 'true'
         name: Bumping latest version of this package in other repositories
-        uses: derberg/npm-dependency-manager-for-your-github-org@v4
+        uses: derberg/npm-dependency-manager-for-your-github-org@89c9448cf1854b483a75c9d17021f9f17d807efc # v4
         with:
           github_token: ${{ secrets.GH_TOKEN }}
           committer_username: asyncapi-bot

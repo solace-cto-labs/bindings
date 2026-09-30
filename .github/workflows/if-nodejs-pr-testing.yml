@@ -27,7 +27,7 @@ jobs:
           git config --global core.eol lf
       - if: steps.should_run.outputs.shouldrun == 'true' 
         name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@0717577d45739eb3c851188b29f50ed6c0b2194e # v2
       - if: steps.should_run.outputs.shouldrun == 'true' 
         name: Check if Node.js project and has package.json
         id: packagejson
@@ -35,7 +35,7 @@ jobs:
         shell: bash
       - if: steps.packagejson.outputs.exists == 'true'
         name: Setup Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@7c12f8017d5436eb855f1ed4399f037a36fbd9e8 # v2
         with:
           node-version: 14
           cache: 'npm'

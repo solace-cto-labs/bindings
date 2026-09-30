@@ -16,7 +16,7 @@ jobs:
     steps:
       - name: Add label
         if: contains(github.event.comment.body, '/good-first-issue') || contains(github.event.comment.body, '/gfi' )
-        uses: actions/github-script@v5
+        uses: actions/github-script@211cb3fefb35a799baa5156f9321bb774fe56294 # v5
         with:
           github-token: ${{ secrets.GH_TOKEN }}
           script: |
