@@ -24,7 +24,7 @@ jobs:
           github-token: "${{ secrets.GH_TOKEN_BOT_EVE }}"
 
       - name: Label autoapproved
-        uses: actions/github-script@v5
+        uses: actions/github-script@211cb3fefb35a799baa5156f9321bb774fe56294 # v5
         with:
           github-token: ${{ secrets.GH_TOKEN }}
           script: |
@@ -41,7 +41,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Automerging
-        uses: pascalgn/automerge-action@v0.13.0
+        uses: pascalgn/automerge-action@c6f2699cc4c19ea7ce7f560dbebd85565b744377 # v0.13.0
         env:
           GITHUB_TOKEN: "${{ secrets.GH_TOKEN }}"
           GITHUB_LOGIN: asyncapi-bot

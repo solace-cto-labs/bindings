@@ -22,7 +22,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Get list of authors
-        uses: sergeysova/jq-action@v2
+        uses: sergeysova/jq-action@a3f0d4ff59cc1dddf023fc0b325dd75b10deec58 # v2
         id: authors
         with:
           # This cmd does following (line by line):
@@ -43,7 +43,7 @@ jobs:
                 | join("\n")'
           multiline: true
       - name: Automerge PR
-        uses: pascalgn/automerge-action@v0.14.3
+        uses: pascalgn/automerge-action@04dfc9eae2586d19b7362d4f6413c48135d9c25a # v0.14.3
         env:
           GITHUB_TOKEN: "${{ secrets.GH_TOKEN }}"
           MERGE_LABELS: "!do-not-merge,ready-to-merge"

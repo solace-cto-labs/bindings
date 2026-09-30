@@ -13,7 +13,7 @@ jobs:
     if: ${{ github.event.issue.pull_request && contains(github.event.comment.body, '/help') && github.actor != 'asyncapi-bot' }}
     runs-on: ubuntu-latest
     steps:
-      - uses: actions-ecosystem/action-create-comment@v1
+      - uses: actions-ecosystem/action-create-comment@e23bc59fbff7aac7f9044bd66c2dc0fe1286f80b # v1
         with:
           github_token: ${{ secrets.GH_TOKEN }}
           body: |
@@ -30,7 +30,7 @@ jobs:
     if: ${{ !github.event.issue.pull_request && contains(github.event.comment.body, '/help') && github.actor != 'asyncapi-bot' }}
     runs-on: ubuntu-latest
     steps:
-      - uses: actions-ecosystem/action-create-comment@v1
+      - uses: actions-ecosystem/action-create-comment@e23bc59fbff7aac7f9044bd66c2dc0fe1286f80b # v1
         with:
           github_token: ${{ secrets.GH_TOKEN }}
           body: |

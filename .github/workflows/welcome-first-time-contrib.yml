@@ -17,7 +17,7 @@ jobs:
     if: ${{ !contains(fromJson('["asyncapi-bot", "dependabot[bot]", "dependabot-preview[bot]", "allcontributors"]'), github.actor) }}
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/github-script@v3
+    - uses: actions/github-script@ffc2c79a5b2490bd33e0a41c1de74b877714d736 # v3
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
         script: |
